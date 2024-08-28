@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    width: 360px;
+    height: 500px; /* Fixed height */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+#chatbox {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #007bff;
+    color: #ffffff;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #f1f1f1;
+    color: #333333;
+    align-self: flex-end;
+    text-align: right;
+}
+
+#typingIndicator {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#typingIndicator span {
+    background-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    animation: typing 1.4s infinite;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#inputArea {
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#userInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.suggestions {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.suggestions button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestions button:hover {
+    background-color: #0056b3;
+}
+/* Add this to your existing CSS */
+
+.ticket-options {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.ticket-type {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.ticket-type label {
+    margin-right: 10px;
+}
+
+.ticket-type .increment {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-type button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ticket-type button:hover {
+    background-color: #0056b3;
+}
+
+.ticket-type input {
+    width: 30px;
+    text-align: center;
+}
+/* Add this to your existing CSS */
+
+/* Style for the detail preview box */
+#previewBox {
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#previewBox p {
+    margin: 5px 0;
+}
+
+#previewBox .header {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
